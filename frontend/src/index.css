@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-background: var(--color-background);
+  --color-text: var(--color-text);
+  --color-accent: var(--color-accent);
+  --color-bg-strong: var(--color-bg-strong);
+  --color-surface: var(--color-surface);
+  --color-surface-soft: var(--color-surface-soft);
+  --color-ink-on-dark: var(--color-ink-on-dark);
+  --color-muted-on-dark: var(--color-muted-on-dark);
+  --color-border-soft: var(--color-border-soft);
+  --color-glow: var(--color-glow);
+  --color-card-a: var(--color-card-a);
+  --color-card-b: var(--color-card-b);
+  --color-card-c: var(--color-card-c);
+  --color-chip: var(--color-chip);
+}
+
+@layer base {
+  html {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  .theme-anandwan {
+    --color-primary: #d4a373;
+    --color-secondary: #faedcd;
+    --color-background: #0d0a09;
+    --color-text: #f5ebe6;
+    --color-accent: #e27d60;
+    --color-bg-strong: #000000;
+    --color-surface: #171210;
+    --color-surface-soft: #241b18;
+    --color-ink-on-dark: #fbf5f3;
+    --color-muted-on-dark: #9c8479;
+    --color-border-soft: rgba(226, 125, 96, 0.15);
+    --color-glow: rgba(226, 125, 96, 0.2);
+    --color-card-a: #1c1513;
+    --color-card-b: #1f1715;
+    --color-card-c: #140e0c;
+    --color-chip: #8a5a44;
+  }
+
+  .theme-govigyan {
+    --color-primary: #8ab0ab;
+    --color-secondary: #c8d5b9;
+    --color-background: #090c0a;
+    --color-text: #e6f0eb;
+    --color-accent: #4a7c59;
+    --color-bg-strong: #000000;
+    --color-surface: #0f1713;
+    --color-surface-soft: #17241d;
+    --color-ink-on-dark: #f4fdf8;
+    --color-muted-on-dark: #7a9c8b;
+    --color-border-soft: rgba(74, 124, 89, 0.2);
+    --color-glow: rgba(74, 124, 89, 0.25);
+    --color-card-a: #111a15;
+    --color-card-b: #151e18;
+    --color-card-c: #0c120e;
+    --color-chip: #3b5c45;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+}
