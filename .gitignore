@@ -127,3 +127,6 @@ dist
 .agent/
 .planning/
 .gemini/
+AGENTS.md
+GEMINI.md
+.vscode/
