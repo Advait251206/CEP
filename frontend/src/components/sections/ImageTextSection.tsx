@@ -22,7 +22,7 @@ export default function ImageTextSection({
   
   return (
     <section className="overflow-hidden border-t border-[color:var(--color-border-soft)] bg-gradient-to-b from-[color:var(--color-surface)]/55 to-[color:var(--color-background)] py-28 md:py-36">
-      <div className={`max-w-[1600px] mx-auto px-6 md:px-8 flex flex-col gap-20 md:gap-24 items-center ${
+      <div className={`max-w-[1600px] mx-auto px-6 md:px-8 flex flex-col gap-12 md:gap-16 items-center md:items-stretch ${
         imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'
       }`}>
         
@@ -32,9 +32,9 @@ export default function ImageTextSection({
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 flex flex-col"
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-[color:var(--color-border-soft)] shadow-[0_16px_50px_-28px_var(--color-primary)]">
+          <div className="relative w-full h-[400px] md:h-full overflow-hidden rounded-3xl border border-[color:var(--color-border-soft)] shadow-[0_16px_50px_-28px_var(--color-primary)]">
             {/* Dark gradient overlay at bottom for depth */}
             <div className="absolute inset-0 z-10 bg-gradient-to-t from-[color:var(--color-bg-strong)]/25 via-transparent to-transparent opacity-80" />
             
@@ -59,7 +59,7 @@ export default function ImageTextSection({
         </motion.div>
 
         {/* Text Side */}
-        <div className="relative w-full md:w-1/2 rounded-3xl border border-[color:var(--color-border-soft)] bg-[linear-gradient(145deg,var(--color-card-a)_0%,var(--color-card-b)_55%,var(--color-card-c)_100%)] p-8 md:p-10 shadow-[0_18px_45px_-24px_var(--color-primary)]">
+        <div className="relative w-full md:w-1/2 flex flex-col justify-center rounded-3xl border border-[color:var(--color-border-soft)] bg-[linear-gradient(145deg,var(--color-card-a)_0%,var(--color-card-b)_55%,var(--color-card-c)_100%)] p-8 md:p-10 shadow-[0_18px_45px_-24px_var(--color-primary)]">
           <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_right,var(--color-glow),transparent_56%)]" />
           <AnimatedText>
             {subtitle && (
