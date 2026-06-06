@@ -2,10 +2,14 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI as string);
+    if (!process.env.MONGO_URI) {
+      console.warn('MongoDB connection string (MONGO_URI) not found. Skipping database connection. App will run but DB operations will fail.');
+      return;
+    }
+    const conn = await mongoose.connect(process.env.MONGO_URI);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error: any) {
-    console.error(`Error: ${error.message}`);
-    process.exit(1);
+    console.error(`MongoDB Connection Error: ${error.message}`);
+    console.warn('Database is not connected. Application will continue to run.');
   }
 };
